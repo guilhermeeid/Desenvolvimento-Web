@@ -1,0 +1,23 @@
+body {
+    font-family: Verdana, Comic;
+}
+
+h1{
+    color: rgb(7, 85, 0);
+    text-align: justify;
+}
+
+p{
+    font-size: 16px;
+    color: rgba(83, 39, 0, 0.829);
+
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+a{
+    color: rgb(17, 255, 0);
+    text-decoration: none;
+}
