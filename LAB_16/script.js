@@ -8,7 +8,7 @@ function adicionaNumero(numero) {
 }
 
 function adicionaOperacao(operacao) {
-    if (operacaoAtual !== '') {
+    if (operacaoAtual !== '' && !/[\+\-\*\/]$/.test(operacaoAtual)) {
         operador = operacao;
         operacaoAtual += operacao;
         atualizarTela(operacaoAtual);
@@ -21,7 +21,7 @@ function calcular() {
         atualizarTela(resultado);
         operacaoAtual = resultado.toString();
     } catch (e) {
-        atualizarTela('erro');
+        atualizarTela('Erro');
         operacaoAtual = '';
     }
 }
