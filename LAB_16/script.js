@@ -1,37 +1,34 @@
-const visor = document.getElementById('operacao-atual');
-let operacaoAtual = '';
+function adicionaNumero(numero) {
+    operacaoAtual += numero;
+    atualizarTela(operacaoAtual);
+}
 
-document.querySelectorAll('.numero').forEach(botao => {
-    botao.addEventListener('click', () => {
-        if (visor.textContent === '0' && botao.textContent !== ',') {
-            visor.textContent = botao.textContent;
-        } else {
-            visor.textContent += botao.textContent;
-        }
-        operacaoAtual += botao.textContent === ',' ? '.' : botao.textContent;
-    });
-});
+function adicionaOperacao(operacao) {
+    if (operacaoAtual !== '') {
+        operador = operacao;
+        operacaoAtual += operacao;
+        atualizarTela(operacaoAtual);
+    }
+}
 
-document.querySelectorAll('.operador').forEach(botao => {
-    botao.addEventListener('click', () => {
-        if (botao.textContent === 'AC') {
-            visor.textContent = '0';
-            operacaoAtual = '';
-        } else {
-            operacaoAtual += botao.textContent === '÷' ? '/' :
-                botao.textContent === 'x' ? '*' :
-                    botao.textContent;
-            visor.textContent += botao.textContent;
-        }
-    });
-});
-
-document.querySelector('.igual').addEventListener('click', () => {
+function calcular() {
     try {
-        visor.textContent = eval(operacaoAtual.replace(/,/g, '.'));
-        operacaoAtual = visor.textContent;
-    } catch {
-        visor.textContent = 'Erro';
+        resultado = eval(operacaoAtual);
+        atualizarTela(resultado);
+        operacaoAtual = resultado.toString();
+    } catch (e) {
+        atualizarTela('erro');
         operacaoAtual = '';
     }
-});
+}
+
+function limpar() {
+    operacaoAtual = '';
+    operador = '';
+    resultado = 0;
+    atualizarTela(0);
+}
+
+function atualizarTela(valor) {
+    document.getElementById('resultado').innerHTML = valor;
+}
