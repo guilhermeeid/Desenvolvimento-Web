@@ -1,3 +1,7 @@
+let operacaoAtual = '';
+let operador = '';
+let resultado = 0;
+
 function adicionaNumero(numero) {
     operacaoAtual += numero;
     atualizarTela(operacaoAtual);
