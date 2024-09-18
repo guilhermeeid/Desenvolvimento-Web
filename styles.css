@@ -1,0 +1,125 @@
+body {
+    background-color: #F4F19B;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header { /* Cabeçalho */
+    text-align: center;
+    margin: 15px 0;
+}
+
+h1 { /* Título do Cabeçalho */
+    color: #2AC263;
+    font-size: 45px;
+    font-weight: 800; /* Extra Bold */
+    margin-bottom: 20px;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#quiz {
+    background-color: #356AD6;
+    border-radius: 60px;
+    padding: 45px;
+    text-align: justify;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    width: auto;
+    max-width: 900px;
+}
+
+#quiz h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    color: #F4F19B;
+    margin-bottom: 20px;
+}
+
+#quiz ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#quiz ul li {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: #F4F19B;
+    margin: 10px 0;
+}
+
+input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #214386; /* Cor da borda */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    background-color: #2A55AA; /* Cor de fundo */
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="radio"]:checked {
+    background-color: #F4F19B; /* Cor de fundo quando selecionado */
+}
+
+input[type="radio"]:hover {
+    background-color: #f4f19bbc; /* Cor de fundo ao passar o mouse */
+}
+
+#confirm-container {
+    margin-top: 20px;
+}
+
+#confirm-btn {
+    background-color: #356AD6;
+    color: #F4F19B;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 20px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#confirm-btn:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tela de Resultados */
+#result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+#result-screen h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+}
+
+#restart-btn {
+    background-color: #2A55AA;
+    color: #F4F19B;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
